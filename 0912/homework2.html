@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .header,.footer{
+            color: white;
+            background-color: #28f3ff;
+            text-align: center;
+        }
+
+        div {
+            border: 1px solid blue;
+        }
+
+        .active {
+            float: left;
+            padding: 10px;
+        }
+        .active ul{
+            width: 25%;
+            padding: 20px;
+        }
+
+        .topnav {
+            float: left;
+            width:75%;
+
+        }
+
+
+
+
+    </style>
+
+
+</head>
+<body>
+<h1 class="header">清除浮动的方式及优缺点</h1>
+<div>
+    <div class="active">
+        <ul>
+            <li>first</li>
+            <li>second</li>
+            <li>third</li>
+            <li>fouth</li>
+        </ul>
+    </div>
+        <div class="topnav">
+            <h1>我们要保护大自然</h1>
+            <p>The clear Property
+                The clear property is used to control the behavior of floating elements.
+
+                Elements after a floating element will flow around it. To avoid this, use the clear property.
+
+                The clear property specifies on which sides of an element floating elements are not allowed to float:
+
+            </p>
+        </div>
+    </div>
+</div>
+
+
+<div class="footer">
+    footer
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        div::after{
+            content: "";
+            clear: both;
+            display: table;
+        }
+        div{
+            border: 1px solid blue;
+
+        }
+        .topnav {
+            padding: 30px;
+            color: red;
+            height: 200px;
+            width: 300px;
+            font-size: 50px;
+        }
+        .active{
+            float: right;
+        }
+        .next{
+            margin: 0px;
+            padding: 20px;
+            color: green;
+            height: 150px;
+            width: 160px;
+            font-size: 30px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+<h1>浮动元素脱离原来的文档流</h1>
+
+
+
+<div>
+    <div class="topnav active">div1</div>
+    <div class="topnav">div2</div>
+    <div class="topnav active">div3</div>
+    <div class="topnav">div4</div>
+
+
+<p>浮动元素会脱离原来的文档流.
+    根据原来在文档流中的位置向左或向右浮动.
+    浮动元素在文档流中原来的位置会被下面的元素占用.
+    浮动元素在离它最近的块级元素中浮动
+    浮动元素表现形式为inline-block, 可以并排摆放, 也可以设置宽高, 不设置宽高时, 由内容撑开.
+    绕流现象.
+    内联元素和文本内容不会被浮动元素覆盖, 而是围绕着浮动元素摆放.
+    清除浮动的方式以及优缺点fudongyuansutuoliyuanlaidewendangliu</p>
+</div>
+<h2>浮动元素在离他最近的块级元素中浮动</h2>
+<div>
+    <div class="next">div1</div>
+    <div class="active">div2</div>
+    <div>div3</div>
+    <div>div4</div>
+
+
+
+</div>
+
+
+
+
+
+
+</body>
+</html>

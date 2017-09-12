@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .h {background-color: #fedbff;
+            color: white;
+        }
+        *{
+            box-sizing: border-box;
+        }
+
+        .menu {
+            float: left;
+            width: 25%;
+            padding: 0px;
+            border: 3px solid green;
+
+
+        }
+        .menu ul{
+            padding: 0px;
+            margin: 0;
+            list-style-type: none;
+
+        }
+        .menu li{
+            background-color: #ff7667;
+            color: white;
+            padding: 20px;
+            margin: 10px;
+        }
+        div::after{
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .content {
+            float: left;
+            padding: 25px;
+            width: 75%;
+            border: 1px solid blue;
+        }
+    </style>
+</head>
+<body>
+<div class="h">
+    <h1>限时代码</h1>
+</div>
+<div>
+    <div class="menu">
+        <ul>
+            <li>first</li>
+            <li>second</li>
+            <li>third</li>
+        </ul>
+
+
+    </div>
+    <div class="content">
+        <h2>Content</h2>
+        <p> element should float.
+
+            The clear property is used to
+            control the
+            behavior of floating elements.
+            element should float.
+
+            The clear property is used to control
+            behavior of floating elements. element
+            should float.
+
+            The clear property is used to control
+            the behavior of floating elements.
+        </p>
+    </div>
+
+</div>
+<div>
+    <h1 class="h">Footer</h1>
+</div>
+
+
+</body>
+</html>
