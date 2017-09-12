@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .btn-group button{
+            color: white;
+            background-color: green;
+            float: left;
+            padding: 10px 1px;
+            cursor: pointer;
+            border: 1px solid red;
+
+        }
+
+
+        .btn-group:after{
+            clear: both;
+            display: table;
+            content: "";
+        }
+
+        .btn-group button:not(:last-child){
+            border-right: none;
+        }
+
+
+
+
+        .btn-group button:hover{
+            background-color: black;
+
+        }
+
+
+    </style>
+</head>
+<body>
+<h1>Justified Button Group</h1>
+<p1>Two button in a group</p1>
+
+<div class="btn-group" style="width: 100% ">
+    <button style="width: 50%">Apple</button>
+    <button style="width: 50%">Samsung</button>
+    <button style="width: 50%">Sony</button>
+<p>woshi</p>
+
+</div>
+<p>wowowowoow</p>
+<p2>Three button in a group</p2>
+<div class="btn-group" style="width: 100%">
+
+    <button style="width: 33.3%">Apple</button>
+    <button style="width: 33.3%">Samsung</button>
+    <button style="width: 33.3%">Sony</button>
+
+
+</div>
+<p3>Four button in a group</p3>
+<div class="btn-group" style="width: 100%">
+    <button style="width:25%">Apple</button>
+    <button style="width: 25%">Samsung</button>
+    <button style="width: 25%">Sony</button>
+
+
+</div>
+
+
+</body>
+</html>

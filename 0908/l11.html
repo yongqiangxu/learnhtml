@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .btn-group button{
+            background-color: green;
+            border: 1px solid blue;
+            float:left;
+            padding: 10px 24px;
+            cursor: pointer;
+            color: white;
+
+        }
+        .btn-group button:not(:last-child){
+            border-right:none;
+
+        }
+        .btn-group:after{
+            content: "";
+            display: table;
+            clear: both;
+
+
+
+        }
+        .btn-group button:hover{
+            background-color: red;
+        }
+
+
+
+    </style>
+</head>
+<body>
+<h1>Button Group</h1>
+<div class="btn-group">
+    <button>Apple</button>
+    <button>Samsung</button>
+    <button>Sony</button>
+
+
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .pagination a{
+            color: black;
+            padding: 8px 16px;
+            float:left;
+            text-decoration: none;
+            transition: background-color .3s;
+            font-size: 20px;
+        }
+        .pagination a:hover:not(.active){
+            background-color: green;
+            color: red;
+        }
+        .pagination a.active{
+            background-color: blue;
+            color: white;
+        }
+
+
+
+    </style>
+</head>
+<body>
+<h1>Pagination</h1>
+<p>Responsive pagination with hover effects:</p>
+
+<div class="pagination">
+    <a href="#">&laquo;</a>
+    <a href="#">1</a>
+    <a href="#" class="active">2</a>
+    <a href="#">3</a>
+    <a href="#">4</a>
+    <a href="#">5</a>
+    <a href="#">6</a>
+    <a href="#">&raquo;</a>
+
+
+
+
+</div>
+
+</body>
+</html>
