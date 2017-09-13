@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        div.n1 {
+            border: solid 1px blue;
+            margin: auto;
+            padding: 30px;
+            height: 100px;
+            width: 400px;
+            background-color: green;
+        }
+
+        img {
+            margin: auto;
+            border: solid 3px red;
+            display: block;
+            height: 100px;
+        }
+
+        .p1 {
+            position: relative;
+            border: solid 1px green;
+            height: 180px;
+        }
+
+        .p2 {
+            position: absolute;
+            right: 0px;
+            border: solid 1px red;
+            width: 200px;
+            height: 180px;
+        }
+
+        div p.p3 {
+            text-align: center;
+            /*line-height: 15px;*/
+            margin: 0px;
+            border: solid 1px orange;
+        }
+
+        .f1 {
+            float: right;
+            border: solid 1px black;
+            width: 200px;
+            /*height: 100px;*/
+
+        }
+
+        div p.f2 {
+            text-align: center;
+            /*line-height: 100px;*/
+            padding: 10px;
+        }
+
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        .center{
+
+        }
+
+        .c1 {
+            border: solid 1px green;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+<div class="n1">div1</div>
+<div><img src="/img/1.jpeg" alt="none">
+</div>
+<div class="p1">
+    <div class="p2">
+        <p class="p3">.active {background-color: greencolor: white;</p>
+    </div>
+</div>
+<div class="clearfix">
+    <div class="f1">
+        <p class="f2">useing float rignt
+            asdhasjkdhak</p>
+    </div>
+</div>
+<h1>使用padding实现垂直居中</h1>
+<div class="c1">
+    <div class="center">
+        <p>center</p>
+    </div>
+</div>
+
+</body>
+</html>
