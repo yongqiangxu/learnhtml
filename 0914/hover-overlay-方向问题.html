@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .out {
+            width: 50%;
+            height: auto;
+            position: relative;
+        }
+        .out img{
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .overlay {
+            background-color: #1f50ff;
+            width: 0;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            /*bottom: 0;*/
+            overflow: hidden;
+            transition: 1s ease;
+
+        }
+        .text{
+            color: white;
+            font-size: 30px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            overflow: hidden;
+            white-space: nowrap;
+
+
+
+        }
+        .out:hover .overlay{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="out">
+    <img src="../../img/5.jpg">
+    <div class="overlay">
+        <div class="text">Hello World</div>
+    </div>
+</div>
+
+</body>
+</html>

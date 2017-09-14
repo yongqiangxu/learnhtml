@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .out {
+            border: 1px solid red;
+            width: 50%;
+            position: relative;
+        }
+
+        .out img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .over {
+            width:0;
+            height: 100%;
+            background-color: #1f50ff;
+            position: absolute;
+            right: 0;
+            top:0;
+            /*left: 0;*/
+
+            overflow: hidden;
+            transition: 1s ease;
+        }
+
+        .text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            overflow: hidden;
+            color: white;
+            font-size: 20px;
+            white-space: nowrap;
+
+        }
+
+        .out:hover .over {
+            width: 100%;
+            cursor: pointer;
+
+        }
+    </style>
+</head>
+<body>
+<div class="out">
+    <img src="../../img/5.jpg">
+    <div class="over">
+        <div class="text">Hello World</div>
+
+    </div>
+</div>
+
+
+</body>
+</html>
