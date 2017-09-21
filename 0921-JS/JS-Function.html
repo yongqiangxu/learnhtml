@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    //函数
+    //关键字function
+    //分类 有名函数 匿名函数
+    //结构
+    //function name(){
+        //代码
+    //}
+    //命名规范:数字 字母 下划线 组合,不能以数字开头
+    //见名知意
+    //参数: 在小括号部分
+
+    //没有参数 及 返回值
+    function buywater() {
+        console.log('我去买水了')
+
+    }
+    //调用
+   // buywater();
+
+    //有参数,没有返回值
+    function sayString(str) {
+
+        //参数str的作用域(使用范围)只能在函数内部
+
+    }
+    //使用单引号或双引号都可以
+    sayString('你好,春秋战国')
+    sayString('你好,MOON')
+    sayString('你好,SUN')
+
+
+    //有参数, 有返回值
+    //sum 求和 avg平均值
+    function sum(num1,num2) {
+
+        var result = num1+num2;
+       / /将结果返回到调用的位置
+        return result;
+
+
+    }
+    var res = sum(12,43);
+
+    //没参数,有返回值
+    function getRandomNumbei() {
+        //随机数公式:
+        //Math.random*(B-A+1)+A;
+
+        var num = Math.random()*100;
+        return num;
+
+    }
+    var random = getRandomNumbei();
+
+
+
+</script>
+
+
+
+
+</body>
+</html>

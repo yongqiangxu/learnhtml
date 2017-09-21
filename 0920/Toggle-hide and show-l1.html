@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #myDiv{
+            background-color: #41ffe7;
+            width: 100%;
+            padding: 50px 0;
+            text-align: center;
+            margin-top: 20px;
+
+
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+<h1>Click the"Try it" button to toggle between hiding an showing the DIV element</h1>
+<button onclick="myFunction()">Try it</button>
+<div id="myDiv">
+    This is my div
+
+
+</div>
+<p>The element wiil not</p>
+<script>
+    function myFunction() {
+        var ele = document.getElementById('myDiv');
+        if (ele.style.display === 'none') {
+            ele.style.display = 'block';
+        }
+        else {
+            ele.style.display = 'none';
+        }
+
+
+    }
+
+
+</script>
+
+
+</body>
+</html>

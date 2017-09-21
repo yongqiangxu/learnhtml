@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        div{
+            border: 1px solid blue;
+        }
+        .header,.footer {
+            color: white;
+            background-color: #35e6ff;
+            font-size: 20px;
+            text-align: center;
+
+        }
+
+        div.content div{
+            float: left;
+            padding: 15px;
+        }
+        .dh{
+            width: 25%;
+            /*float: left;*/
+            /*padding: 15px;*/
+
+        }
+        .dh ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .dh li {
+            background-color: #ff9f19;
+            color: white;
+            font-size: 20px;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+
+        .ri {
+            width: 75%;
+            /*padding: 15px;*/
+            /*float: left;*/
+
+        }
+        div.content::after{
+            content: " ";
+            clear: both;
+            display: table;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="header">
+    <h1>Header</h1>
+</div>
+<div class="content">
+    <div class="dh">
+        <ul>
+            <li>First</li>
+            <li>Second</li>
+            <li>Third</li>
+            <li>Fouth</li>
+
+        </ul>
+
+    </div>
+
+    <div class="ri">
+        <h1>Content</h1>
+        <p>background: url('imgs/search.ele.png') no-repeat -1px -416px;
+            width: 15px;
+            height: 13px;background: url('imgs/search.ele.png') no-repeat -1px -416px;
+            width: 15px;
+            height: 13px;</p>
+
+    </div>
+</div>
+    <div class="footer">Footer Text</div>
+
+</div>
+
+</body>
+</html>

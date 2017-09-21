@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Typewriter</h1>
+<p id="word"></p>
+<button id="btn">Click me</button>
+
+<script>
+    var btn_elem = document.getElementById('btn');
+    var word_elem = document.getElementById('word');
+    var i = 0;
+
+    var text = 'Lorem ipsum dummy text blabla;';
+    //    var speed = 50;
+
+    btn_elem.onclick = function click() {
+        if (i < text.length) {
+            word_elem.innerHTML += text.charAt(i);
+            i = i + 1;
+            setTimeout(click, 100);
+
+
+        }
+
+
+    }
+
+
+
+</script>
+
+
+</body>
+</html>

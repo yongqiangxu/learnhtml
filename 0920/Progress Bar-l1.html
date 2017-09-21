@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .myProgress {
+            width: 100%;
+            background-color: #dddddd;
+
+        }
+
+        #myBar {
+            width: 1%;
+            height: 30px;
+            background-color: #4caf50;
+
+        }
+
+        #mybar-Labels {
+            width: 10%;
+            height: 30px;
+            background-color: #4caf50;
+            line-height: 30px;
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<h1>JavaScript Progress Bar</h1>
+<div class="myProgress">
+    <div id="myBar"></div>
+</div>
+<button onclick="move()">Click Me</button>
+
+<script>
+    function move() {
+        var elem = document.getElementById("myBar");
+        var width = 1;
+        var id = setInterval(frame, 10);
+
+        function frame() {
+            if (width >= 100) {
+                clearInterval(id);
+            } else {
+                width++;
+                elem.style.width = width + '%';
+            }
+
+        }
+
+    }
+
+
+</script>
+
+<div class="myProgress">
+    <div id="mybar-Labels">
+        10%
+
+    </div>
+</div>
+<button onclick="move_labels()">Click Me</button>
+
+<script>
+    function move_labels() {
+        var elem_labels = document.getElementById("mybar-Labels");
+        var width = 10;
+        var id = setInterval(frame, 10);
+
+        function frame() {
+            if (width >= 100) {
+                clearInterval(id);
+            } else {
+                width++;
+                elem_labels.style.width = width + '%';
+                elem_labels.innerHTML = width * 1 + '%';
+            }
+
+        }
+
+
+    }
+
+
+</script>
+
+
+</body>
+</html>

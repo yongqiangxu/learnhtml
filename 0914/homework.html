@@ -25,12 +25,14 @@
             width: 220px;
             height: 220px;
             margin: 38px 9px 15px 9px;
+            border: solid 1px red;
         }
 
-        .money {
+        .money a {
             border: 1px solid black;
             display: block;
             margin: 0;
+            border: solid 1px blue;
         }
 
         .money p {
@@ -39,6 +41,7 @@
             line-height: 22px;
             font-size: 20px;
             margin: 0px;
+            border: 1px solid red;
 
         }
 
@@ -123,20 +126,20 @@
         .footer div {
             float: left;
             border: solid 1px #dddddd;
-            /*margin-left: -1px;*/
-            padding: 0 3px 0 26px;
+            margin-left: -1px;
+            padding: 0 3px 0 3px;
             font-size: 12px;
             line-height: 27px;
+            position: relative;
+        }
+        .footer{
+            border: 1px blue solid;
         }
 
-        .footer div:not(:last-child){
-            border-right: none;
-
-
-        }
-        div.footer div:hover{
+        div.footer div:hover {
             color: #e4393c;
             border-color: #e4393c;
+            z-index: 1;
 
         }
 
@@ -149,6 +152,16 @@
         .footer1 {
             height: 27px;
             width: 57px;
+        }
+
+        .sprite {
+            background-img: url('../../img/search.ele.png');
+            background-repeat: no-repeat;
+            background-position: -1px -299px;
+            border: 1px solid red;
+            width: 20px;
+            height: 10px;
+            display: inline-block;
         }
 
         .footer2 {
@@ -165,12 +178,18 @@
 </head>
 <body>
 <div class="container">
+
+
     <a href="#">
         <img src="../../img/5.jpg" alt="none" href="#">
     </a>
+
+
     <div class="money">
         <p><span>¥</span>39.90</p>
     </div>
+
+
     <div class="href">
 
         <a class="h1" href="#">
@@ -190,10 +209,20 @@
         <div class="zy">自营</div>
         <div class="mj">满减</div>
     </div>
+
+
+
     <div class="footer">
-        <div class="footer1">对比</div>
-        <div class="footer2">关注</div>
-        <div class="footer3">加入购物车</div>
+        <div class="footer1">
+            <span class="sprite"></span>对比
+        </div>
+        <div class="footer2">
+            <span class="sprite"></span>
+            关注
+        </div>
+        <div class="footer3">
+            <span class="sprite"></span>加入购物车
+        </div>
     </div>
 
 

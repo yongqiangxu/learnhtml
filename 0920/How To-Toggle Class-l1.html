@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .mystyle{
+            width: 100%;
+            padding: 25px;
+            background-color: coral;
+            color: white;
+            font-size: 25px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+<p>Click the "Try it" button to toggle between adding and
+removing the "mystyle" class name of</p>
+
+<button onclick="myFunction()">Try it</button>
+<div id="myDiv">This is a Div element</div>
+
+
+
+<script>
+    function myFunction() {
+        var ele = document.getElementById('myDiv');
+        ele.classList.toggle('mystyle');
+
+    }
+
+
+
+
+</script>
+<p></p>
+
+</body>
+</html>

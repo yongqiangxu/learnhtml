@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        #myDiv {
+            position: absolute;
+            background-color: #ff2e2f;
+            width: 500px;
+            height: 200px;
+            top: 100px;
+            right: 30px;
+
+        }
+    </style>
+</head>
+<body>
+<button id="btn">off</button>
+<div id="myDiv">
+
+DIV
+
+
+</div>
+
+<script>
+
+    var divele = document.getElementById('myDiv');
+
+    var btnele = document.getElementById('btn')
+    btnele.onclick = function () {
+        //判断此时div的display状态
+        //()是条件
+        if (divele.style.display === 'none'){
+            divele.style.display = 'block';
+        btnele.innerHTML = 'off'}
+        else
+        {divele.style.display='none';
+            btnele.innerHTML='on';
+
+        }
+    }
+
+
+</script>
+
+
+</body>
+</html>

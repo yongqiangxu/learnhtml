@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            font-size: 12px;
+            margin: 0;
+            padding: 0;
+            line-height: 150%;
+            font-family: Verdana;
+            box-sizing: border-box;
+
+        }
+        body{
+            margin: 20px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        div {
+            /*border: blue 1px solid;*/
+        }
+
+        .container {
+            width: 240px;
+            height: auto;
+            border: solid 1px #e9e9e9;
+
+        }
+        .container:hover{
+            -webkit-box-shadow: 0 0 2px 2px #f8f8f8;
+            border: solid 1px #e9e9e9;
+        }
+
+        .top {
+            margin: 38px 9px 15px;
+
+        }
+
+        .top img {
+            width: 220px;
+            height: 220px;
+            display: block;
+            border-radius: 110px;
+        }
+
+        .money {
+            margin-bottom: 8px;
+
+        }
+
+        .money p {
+            color: #e4393c;
+            font-family: Verdana;
+            line-height: 22px;
+            font-size: 20px;
+
+        }
+
+        .money span {
+            font-size: 16px;
+
+        }
+
+        .description {
+            height: 40px;
+            overflow: hidden;
+        }
+
+        .description div {
+            height: 20px;
+            overflow: hidden;
+
+        }
+
+        .description1 a {
+            color: #666666;
+        }
+
+        .description2 a {
+            width: 185px;
+            color: #ffaa71;
+
+        }
+        .description:hover .description1 a{
+            color: #c81623;
+            /*cursor: copy;*/
+        }
+
+        .think {
+            margin-bottom: 9px;
+        }
+
+        .think p {
+            color: #a7a7a7;
+            width: 400px;
+
+        }
+
+        .think a {
+            color: #646fb0;
+            width: 700px;
+
+        }
+
+        .good::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .good {
+        }
+
+        .good div {
+            background-color: #e4393c;
+            padding: 0 2px;
+            color: white;
+            float: left;
+            height: 16px;
+
+        }
+
+        div.good div.margin {
+            margin-right: 3px;
+        }
+
+        .footer::after {
+            clear: both;
+            display: table;
+            content: "";
+
+        }
+
+        .footer div {
+            float: left;
+            height: 27px;
+            color: #999;
+            border: 1px solid #dddddd;
+            margin-right: -1px;
+            position: relative;
+            width: 57px;
+            line-height: 27px;
+
+        }
+
+        .footer div:hover {
+            border: solid 1px #e4393c;
+            color: #e4393c;
+            z-index: 1;
+
+        }
+
+        .db {
+            background: url('../../img/search.ele.png') no-repeat -1px -299px;
+            width: 8px;
+            height: 8px;
+            border: 1px solid red;
+            display: inline-block;
+            vertical-align: baseline;
+            margin-right: 10px;
+
+
+        }
+
+        .gz {
+            background: url('../../img/search.ele.png') no-repeat -1px -416px;
+            width: 15px;
+            height: 13px;
+            display: inline-block;
+            border: solid 1px #999;
+
+        }
+        .img-car{
+
+        }
+
+        div.car {
+            width: 97px;
+            text-align: center;
+            line-height: 27px;
+
+        }
+
+        .img-car {
+
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!--图片-->
+    <div class="top">
+        <a href="#"><img src="../../img/5.jpg"></a>
+    </div>
+    <!--价格-->
+    <div class="money">
+        <p><span>¥</span>39.90</p>
+    </div>
+    <!--描述-->
+    <div class="description">
+        <div class="description1">
+            <a href="#">优选100 新奇士美国进口夏橙
+                12个装 单果重约140-200g 新鲜水果
+            </a>
+        </div>
+        <div class="description2">
+            <a href="#">【618销售王牌】【天天果园
+                海外直采】【新奇士品牌】【感恩返场】
+                橙风破浪，酸甜多汁，维C满满！
+                搭配优质新西兰柠檬，营养更佳，美美哒！
+            </a>
+        </div>
+    </div>
+    <!--评价-->
+    <div class="think">
+        <p>已有<a href="#">1.9万+</a>人评价</p>
+
+
+    </div>
+
+    <!--自营-->
+    <div class="good">
+        <div class="margin">自营</div>
+        <div>满减</div>
+    </div>
+
+    <!--Footer购物车-->
+
+    <div class="footer">
+        <a href="#">
+            <div><span class="db"></span>对比</div>
+        </a>
+        <a href="#">
+            <div><span class="gz"></span>关注</div>
+        </a>
+        <a href="#">
+            <div class="car"><span class="img-car"></span>加入购物车</div>
+        </a>
+
+
+    </div>
+
+</div>
+
+
+</body>
+</html>
