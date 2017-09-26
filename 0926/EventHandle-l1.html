@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .out{
+            height: 100px;
+            width: 100px;
+            border: solid 1px red;
+        }
+    </style>
+    <script src="EventHandle-事件处理-l1.js"></script>
+</head>
+<body>
+<div class="out">
+
+</div>
+
+<script>
+
+    var div = document.getElementsByClassName('out')[0];
+    function change_color() {
+        this.style.backgroundColor = 'red';
+
+    }
+    EventHandle.addevent(div, 'click', change_color);
+    Eventhadle.removeevent(div, 'click', chang_color());
+
+
+</script>
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .div{
+            height: 100px;
+            width: 100px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+<div class="div">
+
+</div>
+
+
+
+
+<script>
+
+    var ele = document.getElementsByClassName('div')[0];
+    ele.onclick = function () {
+        console.log(ele);
+        this.style.backgroundColor = 'red';
+    }
+
+
+
+</script>
+
+
+</body>
+</html>

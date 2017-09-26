@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+
+    </style>
+</head>
+<body>
+
+<script>
+
+
+    setInterval(make_div, 1000);
+
+    function make_div() {
+        var letter_div = document.createElement('div');
+        letter_div.style.width = 50 + 'px';
+        letter_div.style.height = 50 + 'px';
+        letter_div.style.fontSize = 50 + 'px';
+        var num = Math.floor(Math.random() * (91 - 65) + 65);
+        var letter = String.fromCharCode(num);
+        letter_div.innerHTML = letter;
+        var letter_div_left = Math.floor(Math.random() * document.body.clientWidth);
+
+        letter_div.style.left = letter_div_left + 'px';
+        letter_div.style.position = 'absolute';
+        letter_div.style.top = 15 + 'px';
+        document.body.appendChild(letter_div);
+
+
+        console.log(letter_div)
+
+    }
+    setInterval(move, 100);
+
+    function move() {
+        var div_arr = document.getElementsByTagName('div');
+        for (var i = 0; i < div_arr.length; i++) {
+            var div_letter = div_arr[i];
+
+            div_letter.style.top = div_letter.offsetTop + 15 + 'px';
+            if (div_arr[i].offsetTop > document.body.clientHeight) {
+                document.body.removeChild(div_arr[i]);
+            }
+
+        }
+
+
+    }
+    document.onkeydown = function (key) {
+        var letter = String.fromCharCode(key.keyCode);
+        var div_arr = document.getElementsByTagName('div');
+
+        for (var i = 0; i < div_arr.length; i++) {
+            var div = div_arr[i];
+            if (letter === div.innerHTML) {
+                document.body.removeChild(div)
+            }
+
+
+        }
+
+    }
+
+
+</script>
+
+
+</body>
+</html>

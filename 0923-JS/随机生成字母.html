@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+
+        }
+    </style>
+</head>
+
+<body>
+<script>
+    setInterval(make_letter, 500)
+    function make_letter() {
+
+
+        var letter_div = document.createElement('div');
+        letter_div.style.height = '50' + 'px';
+        letter_div.style.width = '50' + 'px';
+        letter_div.style.fontSize = '50' + 'px';
+        letter_div.style.backgroundColor ='#1e90ff';
+        letter_div.style.textAlign = 'center';
+        letter_div.style.lineHeight = 50 + 'px';
+        letter_div.style.color = 'white';
+
+
+        var num= Math.floor(Math.random() * (91 - 65) + 65);
+
+        letter_div.innerHTML = String.fromCharCode(num);
+
+        letter_div.style.position = 'absolute';
+        letter_div.style.top = 15 + 'px';
+        var letter_div_left =
+            Math.floor(Math.random() * document.body.clientWidth);
+
+        letter_div.style.left = letter_div_left + 'px';
+        document.body.appendChild(letter_div);
+
+
+//        console.log(letter_div);
+    }
+    //字母每100毫秒下落15px;
+    setInterval(function () {
+        letter_move();
+    }, 100)
+    function letter_move() {
+        var letter_arr = document.getElementsByTagName('div');
+        for (var i = 0; i < letter_arr.length; i++) {
+            var letter_div = letter_arr[i];
+
+            letter_div.style.top = letter_div.offsetTop + 15 + 'px';
+
+//            console.log(letter_div.style.top);
+//            console.log(letter_div.offsetTop);
+
+            if (letter_div.offsetTop > document.body.clientHeight) {
+                document.body.removeChild(letter_div);
+            }
+        }
+
+    }
+    document.onkeydown = function (key) {
+        var letter_key = String.fromCharCode(key.keyCode);
+        var letter_arr = document.getElementsByTagName('div');
+        for(var i = 0;i<letter_arr.length;i++){
+            var div = letter_arr[i];
+            if (div.innerHTML === letter_key){
+                 document.body.removeChild(div);
+                break;
+            }
+
+        }
+
+    }
+
+
+</script>
+
+
+</body>
+</html>

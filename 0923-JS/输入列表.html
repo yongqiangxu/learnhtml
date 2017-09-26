@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .head {
+            height: 200px;
+            width: auto;
+            background-color: #ff4d56;
+            position: relative;
+            margin: 0 20px;
+
+        }
+
+        .head h2 {
+            color: white;
+            text-align: center;
+        }
+
+        .box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+
+        }
+
+        input[name=title] {
+            height: 40px;
+            width: 80%;
+            font-size: 20px;
+
+        }
+
+        .btn-add {
+            width: 20%;
+            height: 40px;
+            float: right;
+        }
+
+        .list {
+            margin: 0 20px;
+            height: 100%;
+            position: relative;
+
+        }
+
+        .run-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+        }
+
+        .run-list li {
+            width: 100%;
+            height: 40px;
+            font-size: 20px;
+            padding-left: 30px;
+            line-height: 40px;
+            cursor: pointer;
+            background-color: #cccccc;
+            position: relative;
+
+        }
+
+        .li {
+
+            width: 100%;
+            height: 40px;
+            font-size: 20px;
+            padding-left: 30px;
+            line-height: 40px;
+            cursor: pointer;
+            background-color: #cccccc;
+            position: relative
+
+        }
+
+        .run-list li:nth-child(odd) {
+            background-color: #eeeeee;
+        }
+
+        .run-list li:hover {
+            background-color: #aaa;
+            color: black;
+        }
+
+        .btn-delete {
+            float: right;
+            height: 40px;
+            width: 10%;
+            cursor: pointer;
+            text-align: center;
+
+        }
+
+        .btn-delete:hover {
+            background-color: #ff4d56;
+            color: white;
+
+        }
+
+        ul li.checked {
+            text-decoration: line-through;
+            color: white;
+            background-color: blue;
+        !important;
+
+        }
+
+        ul li.checked::before {
+            content: '';
+            position: absolute;
+            border-color: white;
+            border-style: solid;
+            border-width: 0 2px 2px 0;
+            top: 10px;
+            left: 16px;
+            height: 15px;
+            width: 7px;
+            transform: rotate(45deg);
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+
+<div class="container">
+    <h2>The to do list</h2>
+    <div class="head">
+        <h2>My To Do List</h2>
+
+        <form class="box">
+            <input name="title" placeholder="Title" type="text">
+            <button class="btn-add">Add</button>
+        </form>
+    </div>
+    <div class="list">
+        <ul class="run-list">
+            <li>Pay bill
+                <span class="btn-delete">X</span>
+            </li>
+            <li class="checked">Pay bill
+                <span class="btn-delete">X</span>
+            </li>
+            <li>Pay bill
+                <span class="btn-delete">X</span>
+            </li>
+            <li>Pay bill
+                <span class="btn-delete">X</span>
+            </li>
+            <li>Pay bill
+                <span class="btn-delete">X</span>
+            </li>
+            <li>Pay bill
+                <span class="btn-delete">X</span>
+            </li>
+
+
+        </ul>
+
+    </div>
+
+
+</div>
+
+
+<script>
+
+
+    var btn_delete = document.getElementsByClassName('btn-delete');
+    for (var i = 0; i < btn_delete.length; i++) {
+        var btn = btn_delete[i];
+        btn.onclick = function () {
+            this.parentElement.style.display = 'none'
+        }
+
+
+
+    }
+
+</script>
+
+
+</body>
+</html>

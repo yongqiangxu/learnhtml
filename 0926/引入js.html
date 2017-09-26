@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="创建元素功能对象封装.js"></script>
+    <style>
+        .out{
+            width: 100px;
+            height: 100px;
+            border: 1px solid blue;
+        }
+    </style>
+</head>
+<body>
+<div class="out"></div>
+<script>
+
+    function change_color() {
+        this.style.backgroundColor = 'red';
+    }
+    var div = document.getElementsByClassName('out')[0];
+    Eventhadle.addEvent( div,'click', change_color);
+
+//    Eventhadle.removeEvent(div, 'click', change_color);
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>

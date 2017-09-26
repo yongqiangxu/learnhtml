@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .div{
+            position: absolute;
+            top:50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .color-1{
+            height: 500px;
+            width: 500px;
+            border-radius: 500px;
+            background-color: red;
+
+        }
+        .color-2{
+            height: 450px;
+            width: 450px;
+            border-radius: 450px;
+            background-color: blue;
+
+        }
+        .color-3{
+            height: 400px;
+            width: 400px;
+            border-radius: 400px;
+            background-color: red;
+
+        }
+        .color-4{
+            height: 350px;
+            width: 350px;
+            border-radius: 350px;
+            background-color: blue;
+
+
+        }
+        .color-5{
+            height: 300px;
+            width: 300px;
+            border-radius: 300px;
+            background-color: red;
+
+        }
+        .color-6{
+            height: 250px;
+            width: 250px;
+            border-radius: 250px;
+            background-color: blue;
+        }
+        .color-7{
+            height: 200px;
+
+            width: 200px;
+
+            background-color: red;
+            border-radius: 200px;
+
+        }
+        .color-8{
+            height: 150px;
+
+            width: 150px;
+            border-radius: 150px;
+            background-color: blue;
+
+        }
+        .color-9{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 100px;
+        }
+        .color-10{
+            width: 50px;
+            height: 50px;
+            background: blue;
+            border-radius: 50px;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="color-1 div">
+    <div class="color-2 div">
+        <div class="color-3 div">
+            <div class="color-4 div">
+                <div class="color-5 div">
+                    <div class="color-6 div">
+                        <div class="color-7 div">
+                            <div class="color-8 div">
+                                <div class="color-9 div">
+                                    <div class="color-10 div">
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    var color_arr = document.getElementsByClassName('div');
+    setInterval(change_color,1000);
+    function change_color() {
+
+        var first_color = getComputedStyle(color_arr[0],null).backgroundColor;
+        for (var i = 0; i<color_arr.length-1; i++){
+            color_arr[i].style.backgroundColor = getComputedStyle(color_arr[i+1],null).backgroundColor;
+
+
+
+
+        }
+        color_arr[color_arr.length-1].style.backgroundColor = first_color;
+
+    }
+
+
+
+
+</script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .out{
+            height: 200px;
+            width: 200px;
+            background-color: red;
+
+        }
+        .middle{
+            height: 150px;
+            width: 150px;
+            background-color: yellow;
+        }
+        .in{
+            height: 100px;
+            width: 100px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+<div class="out">
+    <div class="middle">
+        <div class="in">
+
+        </div>
+    </div>
+</div>
+
+
+<script>
+    var div1 = document.getElementsByClassName('out')[0];
+    var div2 = document.getElementsByClassName('middle')[0];
+    var div3 = document.getElementsByClassName('in')[0];
+
+
+//    onclick
+//    div1.onclick = function (ev) {
+//        console.log('ev');
+//        console.log('out');
+//
+//    };
+//
+//    div2.onclick = function () {
+//        console.log('middle');
+//    };
+//
+//    div3.onclick = function () {
+//        console.log('in');
+//
+//
+//    };
+
+
+//    addElementListener
+    div1.addEventListener('click', function (ev) {
+        console.log('out');
+        console.log(ev);
+
+    }, true);
+
+    div2.addEventListener('click', function (ev) {
+        console.log('middle');
+    }, true);
+
+    div3.addEventListener('click', function (ev) {
+
+        console.log('in');
+    }, true);
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

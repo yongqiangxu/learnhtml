@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        div {
+            padding: 50px;
+            border: 1px solid black;
+        }
+
+        #green {
+            height: 400px;
+            width: 400px;
+            background-color: green;
+
+        }
+
+        #blue {
+            height: 300px;
+            width: 300px;
+            background-color: blue;
+
+        }
+
+        #yellow {
+            height: 200px;
+            width: 200px;
+            background-color: yellow;
+
+        }
+
+        #red {
+            height: 100px;
+            width: 100px;
+            background-color: red;
+
+        }
+    </style>
+</head>
+<body>
+
+<div id="green">
+    <div id="blue">
+        <div id="yellow">
+            <div id="red">
+
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+
+    setInterval(change_color, 1000);
+
+    var ele_one = document.getElementById('red');
+    var ele_two = document.getElementById('yellow');
+    var ele_three = document.getElementById('blue');
+    var ele_four = document.getElementById('green');
+    var ele_arr = [ele_one, ele_two, ele_three, ele_four];
+//    var length = ele_arr.length;
+    function change_color() {
+        var first_ele_color = getComputedStyle(ele_arr[0], null).backgroundColor;
+
+        for (var i = 0; i < ele_arr.length - 1; i++) {
+            ele_arr[i].style.backgroundColor = getComputedStyle(ele_arr[i + 1], null).backgroundColor;
+
+
+        }
+        ele_arr[ele_arr.length-1].style.backgroundColor = first_ele_color;
+    }
+
+
+</script>
+
+
+</body>
+</html>

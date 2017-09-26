@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+
+
+<script>
+    // 定义数组
+    var names_arr = ['1', 1, 'tom'];
+    //访问数组中的元素
+    var name = names_arr[1];
+
+    //遍历数组 for 遍历输出每个元素
+    // for(初始值, 循环条件, )
+    for (var i = 0; i < names_arr.length; i++) {
+        console.log(names_arr[i]);
+
+    }
+    console.log('for下面语句')
+
+    //遍历数组,判断是否有'tom'
+    for (var j = 0; j < names_arr.length; j++) {
+        if (names_arr[j] === 'tom') {
+            console.log('有tom');
+            break;
+
+        } else {
+            console.log('没有tom')
+
+        }
+
+        console.log('没有tom')
+
+    }
+    //while 循环与 for 循环区别
+//    while (条件){
+//
+//    }
+
+    var k = 0;
+    while (k < names_arr.length){
+        console.log(names_arr[k]);
+        k++;
+    }
+    //无线循环
+    //while(1)
+
+
+
+
+
+</script>
+
+
+</body>
+</html>

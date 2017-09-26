@@ -5,11 +5,17 @@
     <title>Title</title>
 </head>
 <body>
-<button onclick="word()">更换</button>
+<p id="number">111</p>
+<button onclick="()">更换</button>
 
 
 <script>
-    
+    var rabdomNumber = document.getElementById('number');
+
+    function word(999,100) {
+        rabdomNumber.innerHTML = parseInt(Math.random()*(100-999+1)+999);
+    }
+    setInterval(word,100)
 
 
 

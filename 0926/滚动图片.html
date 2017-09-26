@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .big-img {
+            height: 500px;
+            width: 900px;
+            display: block;
+            float: right;
+        }
+
+        .big-div {
+            width: 100%;
+            height: 500px;
+        }
+
+        .roll-div {
+            width: 100%;
+            height: 120px;
+        }
+
+        .roll-div img {
+            width: 200px;
+            height: 120px;
+            margin: 10px 20px 0 0;
+            display: block;
+            float: right;
+
+        }
+
+        .dark {
+            background-color: white;
+            border: 3px solid black;
+
+        }
+
+        .bring {
+            border: red solid 3px;
+            width: 10px;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="big-div">
+    <img src="img/wuyou1.jpg" alt="none" class="big-img">
+</div>
+<div class="roll-div">
+    <img src="img/wuyou2.jpg" id="roll-img1">
+    <img src="img/wuyou3.jpg" id="roll-img2">
+    <img src="img/wuyou4.jpg" id="roll-img3">
+    <img src="img/wuyou5.jpg" id="roll-img4">
+
+
+</div>
+
+
+<script>
+    var roll1 = document.getElementById('roll-img1');
+
+
+    function brightness() {
+        this.classList.add('bring');
+    }
+
+    function darking() {
+        thi.classList.add('dark');
+    }
+
+
+    roll1.addEventListener('mouseover', brightness, false);
+
+    roll1.addEventListener('click', darking, false);
+
+    console.log(roll1)
+
+    //    for (var j = 0; j < roll_img_arr.length; j++){
+    //        var big_div = document.getElementsByClassName('big-div')[0];
+    //        var roll_b = roll_img_arr[j];
+    //        roll_b.addEventListener('mouseover', function (ev) {
+    //            var new_img_arr = document.getElementsByClassName('roll-img');
+    //            for (var j = 0; j < new_img_arr.length; j++) {
+    //                var new_img = new_img_arr[j];
+    //                console.log(new_img);
+    //                new_img.classList
+    //
+
+
+    //            }
+    //            ev.target.document.createElement('img');
+    //            new_img.innerHTML = roll_b;
+    //            console.log(new_img);
+
+    //            big_div.appendChild(new_img);
+
+    //        }, false);
+
+
+    //    }
+
+
+</script>
+
+
+</body>
+</html>
