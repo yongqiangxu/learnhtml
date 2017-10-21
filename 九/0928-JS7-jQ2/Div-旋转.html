@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.2.1.js"></script>
+    <style>
+        .myDiv{
+            height: 200px;
+            width: 200px;
+            background-color: orange;
+            position: absolute;
+            text-align: center;
+            line-height: 200px;
+        }
+    </style>
+
+
+
+</head>
+<body>
+<div class="myDiv">123</div>
+
+
+<script>
+    var deg = 0;
+    var speed = 1;
+    setInterval(function () {
+
+        deg ++;
+        $('.myDiv').css({
+            transform : 'rotate(' + 23 +'deg)',
+            backgroundColor : 'red'
+        });
+
+    },1);
+
+
+</script>
+</body>
+</html>

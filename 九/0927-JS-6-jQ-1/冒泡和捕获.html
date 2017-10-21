@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .out{
+            height: 400px;
+            width: 400px;
+            background-color: orange;
+        }
+        .inner{
+            border: 1px double black;
+        }
+    </style>
+</head>
+<body>
+<div class="out">
+    <p class="inner">Where are you?</p>
+</div>
+<script>
+    var div = document.getElementsByClassName('out')[0];
+    var p = document.getElementsByClassName('inner')[0];
+
+    function divClick() {
+        alert('div的点击事件');
+
+    }
+    function pClick() {
+        alert('p的点击事件');
+
+    }
+
+    p.addEventListener('click', pClick, false);
+    div.addEventListener('click', divClick, false);
+
+
+
+
+
+</script>
+
+
+</body>
+</html>

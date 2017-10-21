@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <script src="jquery-3.2.1.js"></script>
+</head>
+<body>
+<form>
+    <label for="username">username</label>
+    <input type="text" id="username" name="username">
+    <br>
+    <label for="password">password</label>
+    <input id="password" name="password" type="password">
+    <br>
+    <button type="button">login</button>
+
+
+</form>
+
+<script>
+    $("button").click(function () {
+        var username = $('input[name="username"]').val();
+        var password = $('input[name="password"]').val();
+        var url = 'l2.php';
+
+        var data = {
+            'username': username,
+            'password': password
+
+        };
+
+
+        $.post(url, data, function (result) {
+            console.log(result);
+            if (result.status == 0) {
+                alert(result.msg);
+            } else if (result.status == 1) {
+                alert(result.msg);
+                location.href = 'http://www.baidu.com';
+            }
+
+
+        }, 'JSON');
+
+
+    });
+
+
+</script>
+
+
+</body>
+</html>

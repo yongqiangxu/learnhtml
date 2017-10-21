@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.2.1.js"></script>
+</head>
+<body>
+
+<p class="test">This is some <b>bold</b> text in a paragraph</p>
+<p>Name<input type="text" class="test2" value="12345"></p>
+
+
+<button id="btn1">Show Text</button>
+<button id="btn2">Show Html</button>
+<button id="btn3">Show Value</button>
+<script>
+    $('#btn1').click(function () {
+        alert('Text:' + $('.test').text());
+
+
+    });
+
+    $('#btn2').click(function () {
+        alert('Html:' + $('.test').html());
+    });
+
+    $('#btn3').click(function () {
+        alert('value:' + $('.test2').val());
+    });
+
+
+</script>
+
+
+</body>
+</html>

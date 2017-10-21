@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录界面</title>
+    <script src="../jquery-3.2.1.js"></script>
+</head>
+<body>
+<form>
+    <label for="username">Username</label>
+    <input type="text" name="username" id="username">
+    <br>
+    <label for="password">Passsword</label>
+    <input type="password" name="password" id="password">
+    <br>
+    <button type="button" onclick="login()">登录</button>
+
+    <!--javascript 前端脚本-->
+
+    <script>
+
+        //核心业务逻辑: 将数据通过Ajax 传给后台
+        function login() {
+            var username = $('input[name="username"]').val();
+            var password = $('input[name="password"]').val();
+
+            var url = 'Ajax.php';
+            var data = {
+                'username' : username,
+                'password' : password
+
+            };
+            //Ajax的使用
+            $.post(url, data, function (result) {
+                //由于第四个参数指定了'json'格式,后台也发送了json格式,
+                //所以result也是一个对象
+                //对象内容是(
+                // key : value;
+                // key : value;
+                // )
+                // 当用户名输入错误时result {status : 0 , msg : 用户名不存在}
+                // 当密码输入错误时result {status : 0 , msg : 密码错误}
+                // 当输入都正确时 result { status : 1 , msg : success}
+
+                console.log(result);
+
+                if (result.status == 0) {
+                    alert(result.msg);
+
+                }else if (result.status == 1) {
+                    alert(result.msg);
+                    location.href = 'index.html';
+                }
+
+            },'JSON');
+
+
+
+        }
+
+
+
+
+
+    </script>
+
+
+</form>
+
+
+
+</body>
+</html>

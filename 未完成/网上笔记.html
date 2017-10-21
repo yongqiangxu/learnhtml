@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+clientX 设置或获取鼠标指针位置相对于窗口客户区域的 x 坐标，其中客户区域不包括窗口自身的控件和滚动条。
+clientY 设置或获取鼠标指针位置相对于窗口客户区域的 y 坐标，其中客户区域不包括窗口自身的控件和滚动条。
+offsetX 设置或获取鼠标指针位置相对于触发事件的对象的 x 坐标。
+offsetY 设置或获取鼠标指针位置相对于触发事件的对象的 y 坐标。
+screenX 设置或获取获取鼠标指针位置相对于用户屏幕的 x 坐标。
+screenY 设置或获取鼠标指针位置相对于用户屏幕的 y 坐标。
+x 设置或获取鼠标指针位置相对于父文档的 x 像素坐标。
+y 设置或获取鼠标指针位置相对于父文档的 y 像素坐标。
+
+event.clientX返回事件发生时,mouse相对于客户窗口的X坐标，event.X也一样。但是如果设置事件对象的定位属性值为relative，event.clientX不变，而event.X返回事件对象的相对于本体的坐标。
+
+
+代码如下
+<script>
+    var strInfo="";
+    strInfo+="rn网页可见区域宽:"+document.body.clientWidth;
+    strInfo+="rn网页可见区域高:"+document.body.clientHeight;
+    strInfo+="rn网页可见区域宽:"+document.body.offsetWidth+"(包括边线的宽)";
+    strInfo+="rn网页可见区域高:"+document.body.offsetHeight+"(包括边线的宽)";
+    strInfo+="rn网页正文全文宽:"+document.body.scrollWidth;
+    strInfo+="rn网页正文全文高:"+document.body.scrollHeight;
+    strInfo+="rn网页被卷去的高:"+document.body.scrollTop;
+    strInfo+="rn网页被卷去的左:"+document.body.scrollLeft;
+    strInfo+="rn网页正文部分上:"+window.screenTop;
+    strInfo+="rn网页正文部分左:"+window.screenLeft;
+    strInfo+="rn屏幕分辨率的高:"+window.screen.height;
+    strInfo+="rn屏幕分辨率的宽:"+window.screen.width;
+    strInfo+="rn屏幕可用工作区高度:"+window.screen.availHeight;
+    strInfo+="rn屏幕可用工作区宽度:"+window.screen.availWidth;
+    window.confirm(strInfo);
+</script>
+
+x:设置或者是得到鼠标相对于目标事件的父元素的外边界在x坐标上的位置。
+clientX:相对于客户区域的x坐标位置，不包括滚动条，就是正文区域。
+offsetx：设置或者是得到鼠标相对于目标事件的父元素的内边界在x坐标上的位置。
+screenX:相对于用户屏幕
+代码如下
+
+<table border=1 cellpadding=15 cellspacing=15 style="position:relative;left:100;top:100">
+    <tr><td>
+        <div onclick="show()" style="background:silver;cursor:hand">
+            Click here to show.
+        </div>
+    </td></tr>
+</table>
+<script>
+    function show(){
+        alert("window.event.x:"+window.event.x+"nwindow.event.y:"+window.event.y+"nevent.clientX:"+event.clientX+"nevent.clientY:"+event.clientY+"nevent.offsetX:"+event.offsetX+"nevent.offsetY:"+event.offsetY+"nwindow.event.screenX:"+window.event.screenX+"nwindow.event.screenY:"+window.event.screenY);
+    }
+</script>
+
+event.clientX返回事件发生时,mouse相对于客户窗口的X坐标
+event.X也一样
+但是如果设置事件对象的定位属性值为relative
+event.clientX不变
+而event.X返回事件对象的相对于本体的坐标
+event对象详解 ICOOE 2000.3.31 http://www.hzhuti.com
+event代表事件的状态，例如事件发生的的元素、鼠标的位置等等，event对象只在事件过程中才有效。
+
+event属性：
+
+altKey
+检索ALT键的当前状态
+可能的值 true为关闭
+false为不关闭
+
+button
+检索按下的鼠标键
+可能的值： 0 没按键
+1 按左键
+2 按右键
+3 按左右键
+4 按中间键
+5 按左键和中间键
+6 按右键和中间键
+7 按所有的键
+
+cancelBubble
+设置或检索当前事件是否将事件句柄起泡
+可能的值： false 启用起泡
+true 取消该事件起泡
+
+clientX
+检索与窗口客户区域有关的鼠标光标的X坐标，属性为只读，没有默认值。
+
+clientY
+检索与窗口客户区域有关的鼠标光标的Y坐标，属性为只读，没有默认值。
+
+ctrlKey
+ctrlKey 检索CTRL键的当前状态
+可能的值 true为关闭
+false为不关闭
+
+dataFld
+检索被oncellchange事伯影响的列
+
+aTransfer
+为拖放操作提供预先定义的剪贴板式。
+
+Element
+检索在on mouseover和on mouseout事件期间退出的对象指针
+
+keyCode
+设置或检索与引发事件的关键字相关联的Unicode关键字代码
+该属性与onkeydown onkeyup onkeypress一起使用
+如果没有引发事件的关键字，则该值为0
+
+offsetX
+检索与触发事件的对象相关的鼠标位置的水平坐标
+
+offsetY
+检索与触发事件的对象相关的鼠标位置的垂直坐标
+
+propertyName
+检索在对象上己更改的特性的名称
+
+reason
+检索数据源对象数据传输的结果
+可能的值：
+0 数据传输成功
+1 数据传输失败
+2 数据传输错误
+
+recordset
+检索数据源对象中默认记录集的引用
+该特性为只读
+
+repeat
+检索一个事件是否被重复
+该属性只有在onkeydown事件重复时才返回true
+
+returnvalues
+设置或检索从事件中返回的值
+可能的值：
+true 事件中的值被返回
+false 源对象上事件的默认操作被取消
+
+screenX
+检索与用户屏相关的鼠标的水平位置
+
+screenY
+检索与用户屏相关的鼠标的垂直位置
+
+shiftKey
+检索shiftKey键的当前状态
+可能的值 true为关闭
+false为不关闭
+
+srcElement
+检索触发事件的对象
+
+srcFilter
+检索导致onfilterchange事件触发的过滤器对象
+
+srcUm
+检索触发事件行为的同一资源名称
+除非下面两个条件都为真，否则该特性被设置为null
+1.行为被附加到触发事件的要素上
+2.在前面的项目符号中定义的行为己指定了一个URN标识符和己触发的事件
+
+toElement
+检索作为on mouseover或者on mouseout事件结果而移动的对象
+
+type
+检索事件对象中的事件名称
+
+x
+检索相对于父要素鼠标水平坐标的整数
+
+y
+检索相对于父要素鼠标垂直坐标的整数
+
+</body>
+</html>

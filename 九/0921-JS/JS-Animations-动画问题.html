@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #container {
+            height: 400px;
+            width: 400px;
+            background-color: yellow;
+            position: absolute;
+        }
+
+        #content {
+            height: 40px;
+            width: 40px;
+            background-color: red;
+            position: absolute;
+        }
+
+
+    </style>
+</head>
+<body>
+<h1>How to - javascript Html animations</h1>
+<button id="btn">Click Me</button>
+
+<div id="container">
+    <div id="content">
+
+    </div>
+</div>
+
+
+<script>
+    var Content = document.getElementById('content');
+    var Btn = document.getElementById('btn');
+    var id = setInterval(frame, 100);
+    var pos = 0;
+
+
+    function frame() {
+        console.log(id);
+
+        if (pos < 360) {
+            pos = pos + 1;
+
+        } else {
+            clearInterval(id);
+
+        }
+        return pos;
+
+
+    }
+    Btn.onclick = function () {
+        Content.style.top = frame;
+        Content.style.left = frame;
+//        setInterval(frame, 10);
+
+
+    }
+
+
+</script>
+
+
+</body>
+</html>

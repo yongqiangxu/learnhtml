@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.2.1.js"></script>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /*整体*/
+        .container {
+            width: 70%;
+            margin: auto;
+            /*border: 1px solid black;*/
+            margin-top: 50px;
+        }
+
+        /*form表单*/
+        .form {
+            /*border: 1px solid blue;*/
+            width: 60%;
+            margin: auto;
+
+        }
+
+        label {
+            /*border: 1px solid #444444;*/
+            text-align: right;
+            display: inline-block;
+            width: 20%;
+            height: 35px;
+        }
+
+        input {
+            height: 35px;
+            border-color: #444444;
+            display: inline-block;
+            width: 73%;
+            margin-left: 30px;
+            border-color: #aaaaaa;
+            border-radius: 2px;
+        }
+
+        input:focus {
+            border-color: blue;
+            outline: none;
+        }
+
+        input[name = userName] {
+            width: 55%;
+        }
+
+        .sele {
+            width: 15%;
+            height: 35px;
+        }
+
+        .p {
+            display: block;
+            font-size: 12px;
+            color: #aaaaaa;
+            margin-left: 150px;
+
+        }
+
+        /*滑动验证*/
+        .outer {
+            width: 300px;
+            height: 30px;
+            background-color: #888888;
+            margin: auto;
+            margin-top: 200px;
+            position: absolute;
+            left: 40%;
+
+        }
+
+        .inner {
+            width: 30px;
+            height: 30px;
+            background-color: #19ffff;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+
+
+<div class="container">
+    <form class="form">
+        <div class="div1">
+            <label>邮箱地址</label>
+            <input type="text" name="userName"><span>@</span>
+            <select class="sele">
+                <option>123@</option>
+                <option>123@</option>
+                <option>123@</option>
+            </select>
+            <p class="p1 p">6~18个字符，可使用字母、数字、下划线，需以字母开头</p>
+        </div>
+        <div class="div2">
+            <label>密码</label>
+            <input type="password" name="password1">
+            <p class="p2 p">6~16个字符，区分大小写</p>
+        </div>
+        <div class="div3">
+            <label>确认密码</label>
+            <input type="password" name="password2">
+
+            <p class="p3 p">请再次填写密码</p>
+        </div>
+
+    </form>
+    <div class="outer">
+        <div class="inner">
+
+        </div>
+    </div>
+
+
+</div>
+
+
+<script>
+    $(document).ready(function () {
+
+
+        var a = $('.outer').offset().left;
+        var max = $('.outer').width() - $('.inner').width();
+
+        $('.inner').click(function () {
+            var div_left = window.event.x - a;
+            $(document).on('mousemove', function () {
+                var newx = window.event.x;
+                var newleft = newx - a - div_left;
+                if (newleft < 0) {
+                    newleft = 0
+                }
+                if (newleft > max) {
+                    newleft = max
+
+                }
+                if (newleft === max) {
+                    $('.outer').css({
+                        backgroundColor : 'green',
+                        color : 'white',
+                        textAlign : 'center',
+                        lineHeight : '30px',
+
+                    }).html('success')
+                }
+                $('.inner').css({
+                    left: newleft + "px",
+
+                });
+            });
+        });
+        $(document).mouseup(function () {
+            if ($('.inner').position().left < max) {
+
+                $('.inner').animate({'left' : 0})
+
+            }
+            $(document).off('mousemove');
+
+
+
+
+
+        });
+
+
+
+
+
+    });
+
+
+</script>
+
+
+</body>
+</html>

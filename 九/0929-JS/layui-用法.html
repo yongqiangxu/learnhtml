@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <script src="layui/layui.all.js"></script>
+    <script src="封装.js"></script>
+    <style>
+
+        #btn{
+            font-size: 30px;
+            margin: 400px;
+            display: block;
+
+        }
+    </style>
+
+</head>
+<body>
+<button id="btn">Click Me</button>
+
+<script>
+
+var btn = document.getElementById('btn');
+btn.onclick = function () {
+    dialog.success('登录成功','http://www.baidu.com');
+}
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+</body>
+</html>

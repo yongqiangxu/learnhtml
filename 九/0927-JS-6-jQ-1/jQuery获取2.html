@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.2.1.js"></script>
+    <style type="text/css">
+        .p1 {
+            color: orange;
+            font-size: 30px;
+
+        }
+
+        .p2 {
+            border: 1px double black;
+
+        }
+    </style>
+</head>
+<body>
+<button>click</button>
+<p class="p1 p2">hide</p>
+<p class="p1">hide</p>
+<p class="p2">hide</p>
+
+<ul>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+
+
+
+
+</ul>
+
+
+
+<table>
+    <thead>
+    <tr>
+        <th>123</th>
+        <th>123</th>
+        <th>123</th>
+    </tr>
+
+
+    </thead>
+    <tbody>
+    <tr>
+        <td>qwe</td>
+        <td>qwe</td>
+        <td>qwe</td>
+
+
+
+    </tr>
+    <tr>
+        <td>rty</td>
+        <td>rty</td>
+        <td>rty</td>
+    </tr>
+    <tr>
+        <td>asd</td>
+        <td>asd</td>
+        <td>asd</td>
+    </tr>
+
+
+
+
+    </tbody>
+
+
+</table>
+
+
+
+<script>
+    //    $('button').click(function () {
+    //
+    //        $('p').hide();
+    //    })
+    //    $('.p1.p2').css({
+    //        backgroundColor : 'red'});
+    //
+    // $('*').css({
+    //    border : '5px solid green'
+    //})
+
+
+    $('button').mouseover(function () {
+        $(this).css({
+            backgroundColor : 'blue'
+        });
+    });
+
+
+    //$(p.p1) 形式
+
+    $('p:last').css({
+        color : 'red'
+
+
+
+    });
+    $('ul li:first-child').click(function () {
+        $(this).css({
+            border : '1px solid red'
+        })
+
+
+    });
+
+
+
+
+    $('tr:even').css({
+        color : 'red'
+    })
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.2.1.js">
+    </script>
+    <style type="text/css">
+        .myDiv {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            left:50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+    </style>
+
+</head>
+<body>
+<div class="myDiv"></div>
+
+
+<script>
+    $('.myDiv').text('1234567');
+    $('.myDiv').text(function (i,oddText) {
+        return oddText + 'qwerty'
+
+
+
+    })
+
+
+</script>
+
+
+
+
+</body>
+</html>

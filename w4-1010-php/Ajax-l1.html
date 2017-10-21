@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.2.1.js"></script>
+</head>
+<body>
+<form>
+    <label for="username">Username</label>
+    <input type="text" name="username" id="username">
+    <br>
+    <label for="password">Password</label>
+
+    <input name="password" type="password" id="password">
+
+    <br>
+    <button type="button">denglu</button>
+
+</form>
+<script>
+    $('button').click(function () {
+
+
+        var username = $('input[name="username"]').val();
+        var password = $('input[name="password"]').val();
+        var url = 'Ajax-l1.php';
+        var data = {
+            'username': username,
+            'password': password
+        };
+
+
+        $.post(url, data, function (result) {
+
+            if (result == 1) {
+                alert(result);
+            } else if (result ==0) {
+                alert(result);
+            }
+
+
+
+
+
+
+
+
+        }, 'json');
+    });
+
+
+</script>
+
+
+</body>
+</html>

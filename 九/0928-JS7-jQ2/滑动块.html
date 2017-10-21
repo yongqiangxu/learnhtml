@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #out {
+            position: absolute;
+            background-color: #bbb;
+            width: 500px;
+            height: 40px;
+            left: 50%;
+            transform: translate(-50%, 50%);
+            margin-top: 100px;
+
+        }
+
+        #inner {
+            height: 40px;
+            width: 50px;
+            background-color: green;
+            position: absolute;
+
+
+        }
+    </style>
+    <script src="jquery-3.2.1.js"></script>
+</head>
+<body>
+<div id="out">
+    <div id="inner">
+
+    </div>
+</div>
+
+
+<script>
+    $(document).ready(function () {
+        var a = $('#out').offset().left;
+        var max = $('#out').width() - $('#inner').width();
+
+        //鼠标按下事件
+        $('#inner').mousedown(function () {
+            var little_div = window.event.x - a;
+
+
+            //鼠标移动事件
+            $(document).on('mousemove', function () {
+                var newX = window.event.x;
+                var newLeft = newX - a - little_div;
+                if (newLeft < 0) {
+                    newLeft = 0
+                }
+                if (newLeft > max) {
+                    newLeft = max
+                }
+                $('#inner').css({
+                    left: newLeft + "px"
+
+                });
+                if (newLeft === max) {
+                    $('#out').css({
+                        backgroundColor: 'blue'
+                    });
+
+                    $('#out').html('success').css({
+                        color : 'white',
+                        textAlign : 'center',
+                        lineHeight : '40px' ,
+                    })
+
+                }
+
+
+            });
+
+
+        });
+        //鼠标松开事件
+        $(document).mouseup(function () {
+            if ($('#inner').position().left < max) {
+                $('#inner').animate({left: 0});
+            }
+            $(document).off('mousemove');
+
+        })
+
+
+    });
+
+
+</script>
+
+
+</body>
+</html>

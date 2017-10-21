@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSON连接数据库</title>
+    <script src="jquery-3.2.1.js"></script>
+</head>
+<body>
+<form>
+    <label for="username">Username</label>
+    <input type="text" id="username" name="username">
+    <br>
+    <label for="password">Password</label>
+    <input name="password" id="password" type="password">
+    <br>
+    <button type="button">登录</button>
+
+</form>
+
+
+<script>
+    $('button').click(function () {
+        var username = $('input[name="username"]').val();
+        var password = $('input[name="password"]').val();
+        var url = 'Ajax-login-l2';
+        var data = {
+            'username' : username,
+            'password' : password
+        };
+
+
+
+        $.post(url,data,function (result) {
+            if (result.status === 1) {
+                alert(result.msg);
+            } else if (result.status === 0) {
+                alert(result.msg);
+            }
+
+        },'json');
+
+    });
+
+
+
+
+</script>
+
+</body>
+</html>

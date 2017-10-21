@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.2.1.js"></script>
+</head>
+<body>
+
+<form>
+    <label for="username">Username</label>
+    <input type="text" name="username" id="username">
+    <br>
+    <label for="password">Password</label>
+    <input id="password" name="password" type="password">
+    <br>
+    <button type="button">登录</button>
+
+
+</form>
+
+<script>
+    $('button').click(function () {
+        var username = $('input[name="username"]').val();
+        var password = $('input[name="password"]').val();
+//        console.log(username);
+//        console.log(password);
+        var url = 'Ajax-l1.php';
+        var data = {
+            'username' : username,
+            'password' : password
+        };
+
+
+
+        $.post(url,data,function (result) {
+            console.log(result);
+            if (result.status == 1) {
+                alert(result.msg);
+            } else if (result.status == 0) {
+                alert(result.msg);
+            }
+
+        },'json');
+
+
+
+    });
+
+
+</script>
+
+
+
+
+
+</body>
+</html>

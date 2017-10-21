@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+
+
+    <style>
+        .swiper-container{
+            height: 300px;
+            width: 600px;
+        }
+
+
+    </style>
+
+</head>
+<body>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">1</div>
+        <div class="swiper-slide">2</div>
+        <div class="swiper-slide">3</div>
+        <div class="swiper-slide">4</div>
+        <div class="swiper-slide">5</div>
+    </div>
+    <div class="swiper-pagination"></div>
+</div>
+<script>
+    var swiper = new Swiper('swiper-container', {
+        direction : 'isHorizontal',
+        loop : true,
+        pagination : '.swiper-pagination',
+        prevButton : ".swiper-button-prev",
+        nextButton :'.swiper-button-next'
+
+
+
+
+
+
+    })
+
+
+
+</script>
+</body>
+</html>

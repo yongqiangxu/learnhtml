@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.2.1.js"></script>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .content {
+            width: 50%;
+            margin: auto;
+            margin-top: 100px;
+            padding: 30px;
+            border: 1px solid black;
+            /*line-height: 50px;*/
+
+        }
+
+        .content th {
+            text-align: right;
+            /*padding: 0 0 25px;*/
+            /*margin-right: 50px;*/
+        }
+
+        input {
+            height: 30px;
+            margin-left: 40px;
+            width: 65%;
+            font-size: 20px;
+        }
+
+        input:focus {
+            border: blue 1px solid;
+            outline: none;
+        }
+
+        input[name=userName] {
+            width: 45%;
+
+        }
+
+        .sele {
+            width: 15%;
+            height: 30px;
+        }
+
+        p {
+            font-size: 12px;
+            color: #888888;
+            margin: 0 0 20px 40px;
+        }
+
+        .xingbie {
+            width: 20px;
+            /*margin-bottom: 20px;*/
+        }
+
+        input[name=check] {
+            width: 45%;
+            margin: 20px 0 20px 40px;
+        }
+
+        .btn {
+            background-color: green;
+            color: white;
+            font-size: 18px;
+            width: 100px;
+
+        }
+
+
+    </style>
+    <script src="jquery-3.2.1.js"></script>
+    <script src="layui/layui.all.js"></script>
+    <script src="封装.js"></script>
+
+    <!--<script src="layui"-->
+
+
+</head>
+<body>
+<table class="content">
+    <tr>
+        <th>用户名</th>
+        <td>
+            <input type="text" name="userName"><span>@</span>
+            <select class="sele">
+                <option>123.com</option>
+                <option>123.com</option>
+                <option>123.com</option>
+            </select>
+            <br>
+        </td>
+
+
+    </tr>
+    <tr>
+        <th></th>
+        <td><p>6~18个字符，可使用字母、数字、下划线，需以字母开头</p></td>
+    </tr>
+
+    <tr>
+        <th>密码</th>
+        <td>
+            <input type="password" name="password">
+
+
+        </td>
+    </tr>
+    <tr>
+        <th></th>
+        <td><p>可使用字母、数字、下划线</p></td>
+    </tr>
+
+    <tr>
+        <th>确认密码</th>
+        <td>
+            <input type="password" name="password-again">
+            <br>
+        </td>
+
+    </tr>
+    <tr>
+        <th></th>
+        <td><p>请再次填写密码</p></td>
+
+    </tr>
+    <tr>
+        <th>性别</th>
+        <td>
+            <input type="radio" class="xingbie">男
+            <input type="radio" class="xingbie">女
+        </td>
+    </tr>
+    <tr>
+        <th>验证码</th>
+        <td>
+            <input type="text" name="check"><span id="checked"></span>
+        </td>
+    </tr>
+    <tr>
+        <th><input type="checkbox" name="yes"></th>
+        <td>用户协议</td>
+    </tr>
+
+</table>
+<button class="btn">立即注册</button>
+
+<script>
+    $('input[name=userName]').focus(function () {
+
+        $(this).val('');
+
+    }).blur(function () {
+
+        if ($(this).val() === '') {
+
+            $(this).css({
+                backgroundColor: 'red'
+            });
+
+            layer.open({
+
+
+            });
+
+        }
+
+    })
+
+</script>
+
+
+</body>
+</html>

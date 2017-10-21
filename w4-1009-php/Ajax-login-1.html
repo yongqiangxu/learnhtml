@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajqx登录</title>
+    <script src="jquery-3.2.1.js"></script>
+</head>
+<body>
+<form>
+    <label for="usename">Usename</label>
+    <input type="text" name="username" id="usename">
+    <br>
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password">
+    <br>
+    <button type="button">登录</button>
+
+
+</form>
+<script>
+    $('button').click(function () {
+        var url = 'Ajax-login-1.php';
+        var username = $('input[name="username"]').val();
+        var password = $('input[name="password"]').val();
+
+        var data = {
+            'username': username,
+            'password': password
+        };
+
+
+
+        $.post(url, data, function (result) {
+            if (result.status == 1) {
+                alert(result.msg);
+                location.href = 'https://www.baidu.com'
+            }else if (result.status ==0) {
+                alert(result.msg);
+
+            }
+
+        }, 'json');
+
+
+    })
+
+
+</script>
+
+
+</body>
+</html>

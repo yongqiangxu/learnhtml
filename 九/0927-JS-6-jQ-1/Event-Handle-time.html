@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .out {
+            height: 100px;
+            width: 100px;
+            border: 1px solid red;
+        }
+    </style>
+    <script src="Event-handle-time.js">
+
+    </script>
+</head>
+<body>
+<div class="out">
+
+</div>
+<script>
+    function change_color() {
+        this.style.backgroundColor = 'red';
+
+    }
+    var div = document.getElementsByClassName('out')[0];
+    EventHandle.addevent(div,'click', change_color);
+
+    EventHandle.removeevent(div,'click', change_color());
+
+
+
+
+
+</script>
+
+</body>
+</html>
